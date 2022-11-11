@@ -228,3 +228,36 @@ Code goes here
 ### Reflection
 \The hardest thing about this part of this project was the code part and getting the color to change at diffret distances in the project. And the fact that i kept having to go in and change things constantly when it was just a simple camma made my life way harder than it had to be. Overall now i undrstand what ground is and how it works with making things work.
 
+## Motor Control
+
+### Description & Code
+The assignment:   
+Wire up a 6v battery pack to this circuit w/ a motor.
+Code something to make the motor speed up and slow down, based on input from a potentiometer.
+
+```
+import board               #[lines 1-4] Importing neccesary libraries
+import time
+from analogio import AnalogOut, AnalogIn
+import simpleio
+
+motor = AnalogOut(board.A1) #[lines 5 & 6] Definining the motor and potentiometer
+pot = AnalogIn(board.A0)
+
+while True:
+    print(simpleio.map_range(pot.value, 96, 65520, 0, 65535)) #Print mapped potentiometer value to motor inputs
+    motor.value = int(simpleio.map_range(pot.value, 96, 65520, 0, 65535)) #Write the mapped value to motor
+    time.sleep(.1)   
+    
+    code credit goes  and help goes to [Mason D](https://github.com/MasonD552)
+
+### Evidence
+
+https://user-images.githubusercontent.com/113116205/201361347-9953f7a0-43c6-4da2-b5aa-ffca837e63c9.mp4
+
+### Wiring
+![WIN_20221109_10_19_46_Pro](https://user-images.githubusercontent.com/113116205/201361149-7ed2d0c2-81ed-45e6-921d-ae7c0a79a447.jpg)
+finished picure of my wiring diagram 
+
+### Reflection
+this code project was pretty easy we got the wiring down very easally but ran into problens with the batery packs they kept shorting out and causeing the board to relese majic smoke with short circuted the board and that was the biggest problem but other than that the project was very easy. In addition to being very fun to do.
