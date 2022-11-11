@@ -236,7 +236,7 @@ Wire up a 6v battery pack to this circuit w/ a motor.
 Code something to make the motor speed up and slow down, based on input from a potentiometer.
 
 ```
-import board               #[lines 1-4] Importing neccesary libraries
+import board
 import time
 from analogio import AnalogOut, AnalogIn
 import simpleio
@@ -248,7 +248,7 @@ while True:
     print(simpleio.map_range(pot.value, 96, 65520, 0, 65535)) #Print mapped potentiometer value to motor inputs
     motor.value = int(simpleio.map_range(pot.value, 96, 65520, 0, 65535)) #Write the mapped value to motor
     time.sleep(.1)   
-    
+ ```
     code credit goes  and help goes to [Mason D](https://github.com/MasonD552)
 
 ### Evidence
