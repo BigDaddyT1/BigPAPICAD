@@ -261,3 +261,79 @@ finished picure of my wiring diagram
 
 ### Reflection
 this code project was pretty easy we got the wiring down very easally but ran into problens with the batery packs they kept shorting out and causeing the board to relese majic smoke with short circuted the board and that was the biggest problem but other than that the project was very easy. In addition to being very fun to do.
+
+
+
+
+# CircuitPython
+This repository will actually serve as a aid to help you get started with your own template.  You should copy the raw form of this readme into your own, and use this template to write your own.  If you want to draw inspiration from other classmates, feel free to check [this directory of all students!](https://github.com/chssigma/Class_Accounts).
+## Table of Contents
+* [Table of Contents](#TableOfContents)
+* [Hello_CircuitPython](#Hello_CircuitPython)
+* [CircuitPython_Servo](#CircuitPython_Servo)
+* [CircuitPython_LCD](#CircuitPython_LCD)
+* [NextAssignmentGoesHere](#NextAssignment)
+---
+
+## Tempreture sensor 
+
+### Description & Code
+Make the lcd screen display when the tempreture sensor gets to be to hot and when its at a normal tempreture and when the tepreture is to low.
+```
+import board
+import analogio
+import time
+from lcd.lcd import LCD
+from lcd.i2c_pcf8574_interface import I2CPCF8574Interface
+
+
+TMP36_PIN = board.A0  # Analog input connected to TMP36 output.
+
+i2c = board.I2C()
+lcd = LCD(I2CPCF8574Interface(i2c, 0x3f), num_rows=2, num_cols=16) #0x27 or 0x3f
+
+# Function to simplify the math of reading the temperature.
+def tmp36_temperature_C(analogin):
+    millivolts = analogin.value * (analogin.reference_voltage * 1000 / 65535)
+    return (millivolts - 500) / 10
+
+# Create TMP36 analog input.
+tmp36 = analogio.AnalogIn(TMP36_PIN)
+desired_temp_min = 69
+desired_temp_max = 80
+
+while True:
+    # Read the temperature in Celsius.
+    temp_C = tmp36_temperature_C(tmp36)
+    # Convert to Fahrenheit.
+    temp_F = (temp_C * 9/5) + 32
+    # Print out the value and delay a  few seconds before looping again.
+    print("Temperature: {}C {}F".format(temp_C, temp_F))
+    time.sleep(3.0)
+    if temp_F >= desired_temp_min and temp_F <= desired_temp_max:
+        lcd.clear()
+        lcd.print("Its yummy in my tummy time")
+    if temp_F < desired_temp_min:
+        lcd.clear()
+        lcd.print("Turn the fricken heat on")
+    if temp_F > desired_temp_max:
+        lcd.clear()
+        lcd.print("Turn the fucking Ac on")
+    time.sleep(2.0)
+
+```
+Credit for code[cooper Moreland](https://github.com/Cooper-Moreland/EngNotebook3)
+
+### Evidence
+https://user-images.githubusercontent.com/113116205/225036388-d6246158-1e3f-4778-9a6b-60498ba1f6c2.mp4
+
+
+### Wiring
+![WIN_20230314_10_40_40_Pro](https://user-images.githubusercontent.com/113116205/225036690-b5fc5135-a1b7-4d47-97a6-502a644accf6.jpg)
+
+
+### Reflection
+The hardest thing about this part of this project was the code part and getting the color to change at diffret distances in the project. And the fact that i kept having to go in and change things constantly when it was just a simple camma made my life way harder than it had to be. Overall now i undrstand what ground is and how it works with making things work.
+
+
+
