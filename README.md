@@ -333,7 +333,7 @@ https://user-images.githubusercontent.com/113116205/225036388-d6246158-1e3f-4778
 
 
 ### Reflection
-The hardest thing about this part of this project was the code part and getting the color to change at diffret distances in the project. And the fact that i kept having to go in and change things constantly when it was just a simple camma made my life way harder than it had to be. Overall now i undrstand what ground is and how it works with making things work.
+The hardest thing about this part of this project was the code part and getting for the code the go with the lcd screen trying to connect them together was hard cooper helped me figure out the wiering and with the code this task was very fun and very challanging at some points.
 
 
 
