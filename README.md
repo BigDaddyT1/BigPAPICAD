@@ -336,4 +336,7 @@ https://user-images.githubusercontent.com/113116205/225036388-d6246158-1e3f-4778
 The hardest thing about this part of this project was the code part and getting for the code the go with the lcd screen trying to connect them together was hard cooper helped me figure out the wiering and with the code this task was very fun and very challanging at some points.
 
 
+### Onshape certification
 
+### Process
+- THe whole prosses was very hard and very challanging at times because I felt as though i was not getting enough practice in and i was not recivving as much help as i could have gotten. The only help i got was when I would turn to look at my peers and the would give me little direction. THe practice tests helped but they werent really tests in a way they were very broad with the rules that were given and we did not ever get a time limit for the practice tests. SO durring the actuall test I felt as though I had to rush myself to finish the test and I feel that is what caused me to fail. In addition, we really did not have much vocab work to help on the knowlage section and it really hurt me in the long run because I feel as though i was lacking in that area. Overall I feel like I couyld have used a little more studying and a little more structure during the whole prosses.
